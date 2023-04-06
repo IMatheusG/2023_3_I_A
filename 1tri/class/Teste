@@ -14,3 +14,11 @@ class Pessoa():
 
     def cadastrar_endereco(self,rua,numero):
         self.endereco = f'{rua}, {numero}'
+        
+    def mostrar(self):
+        print(f"Nome do usuário é {self.nome}, tem {User.calcular_idade()} anos e mora na {self.endereco}")
+        
+User = Pessoa("Matheus", 30, 5, 2006)
+User.calcular_idade()
+User.cadastrar_endereco("Rua cinza", 15)
+User.mostrar()
